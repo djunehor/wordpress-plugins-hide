@@ -15,7 +15,7 @@ if(!function_exists('wp_get_current_user')) {
 }
 
 
-class ZacWP_PO_Plugin_Order {
+class ZacWP_PO_Plugin_Hide {
 
 	private static $instance;
 	public $pluginColumns = [];
@@ -39,7 +39,7 @@ class ZacWP_PO_Plugin_Order {
 	}
 
 	/**Ensure only one instance of the class
-	 * @return ZacWP_PO_Plugin_Order
+	 * @return ZacWP_PO_Plugin_Hide
 	 */
 	public static function instance() {
 		if ( self::$instance === null ) {
@@ -107,8 +107,8 @@ function ZacWP_Plugin_Order() {
 	static $instance;
 
 	// first call to instance() initializes the plugin
-	if ( $instance === null || ! ( $instance instanceof ZacWP_Plugin_Order ) )
-		$instance = ZacWP_Plugin_Order::instance();
+	if ( $instance === null || ! ( $instance instanceof ZacWP_PO_Plugin_Hide ) )
+		$instance = ZacWP_PO_Plugin_Hide::instance();
 
 	return $instance;
 }
